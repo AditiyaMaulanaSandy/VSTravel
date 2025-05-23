@@ -1,0 +1,571 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FF5252;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    transition: background 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.header-scrolled {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    color: white; /* Warna teks awal putih */
+    transition: color 0.3s ease-in-out;
+}
+
+.header-scrolled a {
+    color: black; /* Warna teks berubah jadi hitam */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 8px;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff7f7f;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: #FF6B6B;
+}
+
+.nav-links li a.book-now {
+    background-color: #FF6B6B;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.nav-links li a.book-now:hover {
+    background-color: #FF5252;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    padding: 80px 5% 50px; /* Adjusted padding */
+    align-items: center;
+    background-size: cover;    
+    gap: 30px;
+    min-height: 65vh; /* Use min-height */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('BG.jpg');
+}
+
+.hero-content {
+    flex: 1;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+    color: white;
+    font-size: 1.1rem; /* Slightly larger paragraph text */
+}
+
+/* About Section */
+.about {
+    padding: 50px 5%;
+    max-width: 1200px;  
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 20px auto; /* Added bottom margin */
+    color: #666;
+}
+
+/* Top Selling Section */
+.top-selling {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.top-selling h2 { /* Subtitle styling */
+    font-size: 0.9rem; /* Adjusted size */
+    color: #FF5252;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px; /* Increased margin */
+    letter-spacing: 1.5px; /* Increased letter spacing */
+}
+
+.top-selling h3 { /* Main title styling */
+    font-size: 2rem; /* Adjusted size */
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 40px; /* Increased margin */
+}
+
+.destinations {
+    display: grid; /* Use grid for better responsiveness */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px; /* Limit width of the destination cards container */
+    margin: 0 auto; /* Center the container */
+    /* flex-wrap: wrap; Not needed with grid */
+}
+
+.destination-card {
+    background-color: white;
+    border-radius: 16px; /* Matched Destination.css */
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Matched Destination.css */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;    
+    cursor: pointer;
+    /* width: 280px;  Let grid handle width */
+    /* height: 400px; Let content determine height */
+    display: flex; /* Use flex for card layout */
+    flex-direction: column; /* Stack image and content vertically */
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure image covers well */
+}
+
+.card-content {
+    flex-grow: 1; /* Allows content to fill remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes price to bottom */
+    padding: 20px;
+    text-align: left; /* Align text left for consistency */
+}
+
+.category {
+    color: #777;
+    font-size: 0.7rem; /* Matched Destination.css */
+    display: flex; /* Use flex for icon and text */
+    align-items: center; /* Align icon and text */
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.category i {
+    color: #FF6B6B; /* Matched Destination.css color */
+    margin-right: 5px;
+    font-size: 0.8rem; /* Matched Destination.css */
+}
+
+.destination-card h3 { /* Title inside card */
+    font-size: 1.1rem; /* Matched Destination.css */
+    font-weight: 700; /* Matched Destination.css */
+    color: #333; /* Matched Destination.css */
+    margin: 5px 0; /* Matched Destination.css */
+}
+
+.days {
+    color: #777;
+    font-size: 0.85rem; /* Matched Destination.css */
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.price {
+    font-weight: bold;
+    color: #FF5733; /* Matched Destination.css */
+    font-size: 1rem; /* Matched Destination.css */
+    margin-top: auto; /* Push to bottom */
+}
+
+.price span {
+    font-weight: 500; /* Matched Destination.css */
+    font-size: 0.8rem; /* Matched Destination.css */
+    color: #FF5733; /* Matched Destination.css */
+}
+
+/* Popup Styles - Copied from Destination.css for consistency, ensure CSS class names are distinct if needed */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 0;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.popup-close:hover {
+    background-color: #FF6B6B;
+    transform: scale(1.1);
+}
+
+.popup-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.popup-header-content { /* Wrapper for title and location */
+    padding: 20px 20px 15px 20px;
+}
+
+.popup-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.popup-location {
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.popup-location i {
+    color: #FF6B6B;
+    margin-right: 8px;
+}
+
+.popup-details-bar { /* Renamed from .popup-details for clarity */
+    display: flex;
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    gap: 15px;
+}
+
+.popup-detail-item {
+    flex: 1;
+    text-align: center;
+}
+
+.popup-detail-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.popup-detail-value {
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+}
+
+.popup-description-content { /* Wrapper for description */
+    padding: 20px;
+    color: #555;
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.popup-booking-btn-container { /* Wrapper for button */
+    padding: 20px;
+    border-top: 1px solid #eee;
+    background-color: white;
+    position: sticky;
+    bottom: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.popup-booking-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.popup-booking-btn:hover {
+    background-color: #FF5252;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Footer bawah */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 5% 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 15px;
+    margin-top: 50px; /* This might make the logo lower than other columns */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keep centered for mobile */
+    text-align: center; /* Keep centered for mobile */
+}
+
+.footer-logo img {
+    width: 80px; /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.footer-column h3 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #ff5757;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a:hover {
+    color: #ff5757;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.fas { /* Applied globally */
+    margin-right: 10px;
+}
+
+.social-icons { /* Ensure this class is unique or intended globally */
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #FF6B6B;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center; /* Center text on mobile */
+        padding-top: 100px; /* Adjust for header */
+    }
+    .hero-content {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .nav-links {
+        display: none; /* Hamburger menu needed */
+    }
+    .top-selling h3 {
+        font-size: 1.6rem;
+    }
+    .destinations {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        gap: 20px;
+    }
+    .popup-content {
+        /* padding: 20px; Covered by inner elements or main padding */
+        max-height: 85vh;
+    }
+    .popup-title {
+        font-size: 1.5rem;
+    }
+     .popup-details-bar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 15px;
+    }
+    .popup-detail-item {
+        text-align: left;
+    }
+}

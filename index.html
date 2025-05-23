@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VSTravel - Book Your Travel</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="Home.css">
+    </head>
+
+    <!-- Header -->
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="Logo-2.png" alt="Logo VSTravel">
+                    <span class="brand">VSTravel</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="Destination.html">Destination</a></li>
+                    <li><a href="Contact Us.html">Contact Us</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="Travel Now.html" class="book-now">Travel Now</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Content-->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>VSTravel - Book Your Travel Tickets Easily and Quickly</h1>
+                <p>VSTravel is a travel ticket booking platform that makes your journey easier. With a fast booking system and flexible schedules, we ensure a smooth and secure travel experience.</p>
+                <a href="Destination.html" class="btn">Find Out More</a>
+            </div>
+        </section>
+
+        <!-- Bagian Top Selling -->
+        <section class="top-selling">
+            <h2> TOP SELLING</h2>
+            <h3>Our Top Destinations</h3>
+            <div class="destinations">
+                <div class="destination-card" data-id="1">
+                    <img src="HOME 2.jpg" alt="Flores Road Trip">
+                    <div class="card-content">
+                        <span class="category">
+                            <i class="fas fa-map-marker-alt"></i> Indonesia
+                        </span>
+                        <h3>Flores</h3>
+                        <p class="days">3 Days</p>
+                        <p class="price">$200 <span>/ person</span></p> 
+                    </div>
+                </div>
+
+                <div class="destination-card" data-id="2">
+                    <img src="HOME 3.jpg" alt="Rome">
+                    <div class="card-content">
+                        <span class="category">
+                            <i class="fas fa-map-marker-alt"></i> Italy
+                        </span>
+                        <h3>Rome</h3>
+                        <p class="days">3 Days</p>
+                        <p class="price">$500 <span>/ person</span></p>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-id="3">
+                    <img src="HOME 4.jpg" alt="London">
+                    <div class="card-content">
+                        <span class="category">
+                            <i class="fas fa-map-marker-alt"></i> United Kingdom
+                        </span>
+                        <h3>London</h3>
+                        <p class="days">7 Days</p>
+                        <p class="price">$250 <span>/ person</span></p>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-id="4">
+                    <img src="HOME 5.jpg" alt="Europe">
+                    <div class="card-content">
+                        <span class="category">
+                            <i class="fas fa-map-marker-alt"></i> Europe
+                        </span>
+                        <h3>Full Europe</h3>
+                        <p class="days">10 Days</p>
+                        <p class="price">$1900 <span>/ person</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Pop Up -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-content">
+                <span class="popup-close" id="popupClose">&#10006;</span>
+                <img class="popup-image" id="popupImage" src="" alt="Destination">
+
+                <div class="popup-header-content">
+                    <h2 class="popup-title" id="popupTitle"></h2>
+                    <div class="popup-location">
+                        <i class="fas fa-map-marker-alt"></i> <span id="popupCountry"></span>
+                    </div>
+                </div>
+
+                <div class="popup-details-bar">
+                    <div class="popup-detail-item">
+                        <span class="popup-detail-label">Duration</span>
+                        <span class="popup-detail-value" id="popupDuration"></span>
+                    </div>
+
+                    <div class="popup-detail-item">
+                        <span class="popup-detail-label">Price</span>
+                        <span class="popup-detail-value" id="popupPrice"></span>
+                    </div>
+                </div>
+
+                <div class="popup-description-content">
+                     <p id="popupDescription"></p>
+                </div>
+                <div class="popup-booking-btn-container">
+                    <button class="popup-booking-btn" id="popupBookingBtn">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Logo-2.png" alt="VS Travel Logo">
+                    <h2>VSTravel</h2>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Destination.html">Destinations</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="Contact Us.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@vstravel.com</li>
+                        <li><i class="fas fa-phone"></i> +1-123-456-7890</li>
+                    </ul>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 VSTravel. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="Home.js"></script>
+    </body>
+</html>

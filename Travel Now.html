@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VSTravel - Book Your Travel Tickets Easily and Quickly</title>
+        <link rel="stylesheet" href="Travel Now.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+
+    <!-- Header -->
+    <body>
+        <header>
+            <nav class="navbar">    
+                <div class="logo">
+                    <img src="Logo-2.png" alt="Logo VSTravel">
+                    <span class="brand">VSTravel</span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Destination.html">Destination</a></li>
+                    <li><a href="Contact Us.html">Contact Us</a></li>
+                    <li><a href="About Us.html">About Us</a></li>   
+                    <li><a href="Travel Now.html" class="book-now active">Travel Now</a></li> 
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Book Your Dream Getaway</h1>
+                <p>Fill in the details below to start your next adventure with VSTravel. We make booking simple and secure.</p>
+            </div>
+
+            <!-- Travel Now Page -->
+            <div id="travel-page" class="travel-page">
+                <div class="travel-form"> 
+                    <h2>Book Your Journey</h2>
+                        
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="destination">Destination</label> 
+                            <div class="destination-container">
+                                <input type="text" id="destination" name="destination" placeholder="Search or select destination" autocomplete="off" required>
+                                <div class="destination-dropdown" id="destination-dropdown"></div>
+                            </div>
+                             <span class="error-message" id="destinationError"></span>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Your Name" name="fullName" required>
+                            <span class="error-message" id="fullNameError"></span>
+                        </div> 
+                        
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Your Number" required>
+                            <span class="error-message" id="phoneNumberError"></span>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="participants">Number of Participants</label>
+                            <input type="number" id="participants" name="participants" min="1" max="10" placeholder="e.g., 2" required> 
+                            <span class="error-message" id="participantsError"></span>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required> 
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        
+                        <div class="date-group-container"> 
+                            <div class="form-group date-group">
+                                <label for="departure">Departure Date</label>
+                                <input type="date" id="departure" name="departure" required>
+                                <span class="error-message" id="departureDateError"></span>
+                            </div>
+                
+                            <div class="form-group date-group">
+                                <label for="return">Return Date</label>
+                                <input type="date" id="return" name="return" required>
+                                <span class="error-message" id="returnDateError"></span>
+                            </div>
+                        </div>
+            
+                        <div class="form-actions">
+                            <button type="submit" id="submitBtn" class="submit-btn">Complete Booking</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Booking Confirmation (Hidden initially) -->
+                <div id="bookingConfirmation" class="booking-confirmation hidden">
+                    <div class="confirmation-content">
+                        <div class="success-icon">✓</div>
+                        <h3>Booking Complete!</h3>
+                        <p>Thank you for booking your adventure with us.</p>
+                        <p>Your booking details have been sent to your email.</p>
+                        <div class="booking-details">
+                            <span id="confirmedName"></span>
+                            <span id="confirmedDates"></span>
+                            <span id="confirmedParticipants"></span>
+                        </div>
+                        <p>Our team will contact you shortly to confirm all details.</p>
+                        <button id="doneBtn" class="done-btn">Done</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Logo-2.png" alt="VS Travel Logo">
+                    <h2>VSTravel</h2>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Destination.html">Destinations</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="Contact Us.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@vstravel.com</li>
+                        <li><i class="fas fa-phone"></i> +1-123-456-7890</li>
+                    </ul>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 VSTravel. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="Travel Now.js"></script>
+    </body>
+</html>

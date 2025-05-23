@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Destination Page</title>
+        <link rel="stylesheet" href="Destination.css">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="Logo-2.png" alt="Logo VSTravel">
+                    <span class="brand">VSTravel</span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Destination.html"class="active">Destination</a></li>
+                    <li><a href="Contact Us.html">Contact Us</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="Travel Now.html"class="book-now">Travel Now</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search destinations...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+
+<section class="destination-grid" id="destinationList">
+    <div class="destination-card" data-id="1">
+        <img src="HOME 2.jpg" alt="Flores">
+        <div class="card-content">
+            <span class="category">
+                <i class="fas fa-map-marker-alt"></i> Indonesia
+            </span>
+            <h3>Flores</h3>
+            <p class="days">3 Days</p>
+            <p class="price">$200 <span>/ person</span></p>
+        </div>
+    </div>
+
+    <div class="destination-card" data-id="2">
+        <img src="HOME 3.jpg" alt="Rome">
+        <div class="card-content">
+            <span class="category">
+                <i class="fas fa-map-marker-alt"></i> Italy
+            </span>
+            <h3>Rome</h3>
+            <p class="days">3 Days</p>
+            <p class="price">$500 <span>/ person</span></p>
+        </div>
+    </div>
+
+    <div class="destination-card" data-id="3">
+        <img src="HOME 4.jpg" alt="Landon">
+        <div class="card-content">
+            <span class="category">
+                <i class="fas fa-map-marker-alt"></i> United Kingdom
+            </span>
+            <h3>London</h3> 
+            <p class="days">7 Days</p>
+            <p class="price">$250 <span>/ person</span></p>
+        </div>
+    </div>
+    
+    <div class="destination-card" data-id="4">
+        <img src="HOME 5.jpg" alt="Europe">
+        <div class="card-content">
+            <span class="category">
+                <i class="fas fa-map-marker-alt"></i> Europe
+            </span>
+            <h3>Full Europe</h3>
+            <p class="days">10 Days</p>
+            <p class="price">$1900 <span>/ person</span></p>
+        </div>
+    </div>
+
+    <div class="destination-card" data-id="5">
+        <img src="HOME 6.jpg" alt="Santorini">
+        <div class="card-content">
+            <span class="category">
+                <i class="fas fa-map-marker-alt"></i> Greece
+            </span>
+            <h3>Santorini</h3>
+            <p class="days">3 Days</p>
+            <p class="price">$300 <span>/ person</span></p>
+        </div>
+    </div>
+
+        <div class="destination-card" data-id="6">
+            <img src="HOME 7.jpg" alt="Bali">
+            <div class="card-content">
+                <span class="category">
+                <i class="fas fa-map-marker-alt"></i> Indonesia
+                </span>
+                <h3>Bali</h3>
+                <p class="days">7 Days</p>
+                <p class="price">$600 <span>/ person</span></p>
+            </div>
+        </div>
+
+        <div class="destination-card" data-id="7">
+            <img src="HOME 8.jpg" alt="Maldives">
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> Maldives</span>
+                    <h3>Male</h3>
+                    <p class="days">2 Days</p>
+                    <p class="price">$150 <span>/ person</span></p>
+                </div>
+        </div>
+
+        <div class="destination-card" data-id="8">
+            <img src="HOME 9.jpg" alt="Singapore">
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> Singapore</span>
+                    <h3>Singapore</h3>
+                    <p class="days">4 Days</p>
+                    <p class="price">$570 <span>/ person</span></p>
+                </div>
+        </div>
+
+        <div class="destination-card" data-id="9">
+            <img src="HOME 10.jpg" alt="Malaysia">
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> Malaysia</span>
+                    <h3>Kuala Lumpur</h3>
+                    <p class="days">4 Days</p>
+                    <p class="price">$350 <span>/ person</span></p>
+                </div>
+        </div>
+
+        <div class="destination-card" data-id="10">
+            <img src="HOME 11.jpg" alt="Bangkok">
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> Thailand</span>
+                    <h3>Bangkok</h3>
+                    <p class="days">5 Days</p>
+                    <p class="price">$640 <span>/ person</span></p>
+                </div>
+        </div>
+
+        <div class="destination-card" data-id="11">
+            <img src="HOME 12.jpg" alt="Brunei">
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> Brunei</span>
+                    <h3>Bandar Seri Begawan</h3> 
+                    <p class="days">2 Days</p>
+                    <p class="price">$100 <span>/ person</span></p>
+                </div>
+        </div>
+
+        <div class="destination-card" data-id="12">
+            <img src="HOME 13.jpg" alt="Shanghai">
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> China</span>
+                    <h3>Shanghai</h3>
+                    <p class="days">3 Days</p>
+                    <p class="price">$200 <span>/ person</span></p>
+                </div>
+        </div>
+
+        <div class="destination-card" data-id="13">
+            <img src="HOME 14.jpg" alt="Seoul">
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> South Korea</span>
+                    <h3>Seoul</h3>
+                    <p class="days">5 Days</p>
+                    <p class="price">$700 <span>/ person</span></p>
+                </div>
+        </div>
+
+        <div class="destination-card" data-id="14">
+            <img src="HOME 15.jpg" alt="Argentina">
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> Argentina</span>
+                    <h3>Buenos Aires</h3> 
+                    <p class="days">6 Days</p>
+                    <p class="price">$450 <span>/ person</span></p>
+                </div>
+        </div>
+
+        <div class="destination-card" data-id="15">
+            <img src="HOME 16.jpg" alt="Seattle">
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> USA</span> 
+                    <h3>Washington D.C.</h3>
+                    <p class="days">6 Days</p>
+                    <p class="price">$450 <span>/ person</span></p>
+                </div>
+        </div>
+       
+        <div class="destination-card" data-id="16">
+            <img src="HOME 17.jpg" alt="Jepang">
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> Japan</span> 
+                    <h3>Mount Fuji</h3>
+                    <p class="days">7 Days</p>
+                    <p class="price">$700 <span>/ person</span></p>
+                </div>
+        </div>
+
+        <div class="destination-card" data-id="17">
+            <img src="HOME 18.jpeg" alt="Jepang">
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> Japan</span> 
+                    <h3>Tokyo Skytree</h3>
+                    <p class="days">3 Days</p>
+                    <p class="price">$210 <span>/ person</span></p>
+                </div>
+        </div>
+
+        <div class="destination-card" data-id="18">
+            <img src="HOME 19.jpg" alt="USA"> 
+                <div class="card-content">
+                    <span class="category">
+                    <i class="fas fa-map-marker-alt"></i> USA</span>
+                    <h3>New York City</h3>
+                    <p class="days">3 Days</p>
+                    <p class="price">$210 <span>/ person</span></p>
+                </div>
+        </div>
+</section>
+
+    <!-- Pop-up container -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <span class="popup-close" id="popupClose">&#10006;</span>
+            <img class="popup-image" id="popupImage" src="" alt="Destination">
+            
+            <div class="popup-header-content">
+                <h2 class="popup-title" id="popupTitle"></h2>
+                <div class="popup-location">
+                    <i class="fas fa-map-marker-alt"></i> <span id="popupCountry"></span>
+                </div>
+            </div>
+
+            <div class="popup-details-bar">
+                <div class="popup-detail-item">
+                    <span class="popup-detail-label">Duration</span>
+                    <span class="popup-detail-value" id="popupDuration"></span>
+                </div>
+
+                <div class="popup-detail-item">
+                    <span class="popup-detail-label">Price</span>
+                    <span class="popup-detail-value" id="popupPrice"></span>
+                </div>
+            </div>
+            
+            <div class="popup-description-content">
+                <p id="popupDescription"></p>
+            </div>
+
+            <div class="popup-booking-btn-container">
+                <button class="popup-booking-btn" id="popupBookingBtn">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="Logo-2.png" alt="VS Travel Logo">
+            <h2>VSTravel</h2>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Destination.html">Destinations</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="Contact Us.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@vstravel.com</li>
+                <li><i class="fas fa-phone"></i> +1-123-456-7890</li>
+            </ul>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 VSTravel. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="Destination.js"></script>
+
+</body>
+</html>
